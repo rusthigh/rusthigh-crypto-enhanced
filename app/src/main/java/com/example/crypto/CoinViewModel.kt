@@ -10,4 +10,9 @@ import com.example.crypto.pojo.CoinPriceInfo
 import com.example.crypto.pojo.CoinPriceRAW
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.coroutines.GlobalSc
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import java.util.concurrent.TimeUnit
+
+class CoinViewModel(application: Application) : AndroidViewModel(application) {
+    private val db = AppDatabase.getInstance(application
