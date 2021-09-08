@@ -15,4 +15,13 @@ import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 
 class CoinViewModel(application: Application) : AndroidViewModel(application) {
-    private val db = AppDatabase.getInstance(application
+    private val db = AppDatabase.getInstance(application)
+    val priceList = db.coinPriceInfoDao().getPriceList()
+    private val compositeDisposable = CompositeDisposable()
+
+    init {
+        GlobalScope.launch { loadData() }
+    }
+
+
+    fun getDetailInfo(fSym: Strin
