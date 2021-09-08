@@ -32,4 +32,11 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
         val topCoinPriceInfo = ApiFactory.apiService.getTopCoinsInfo(limit = 50)
         val fsyms = topCoinPriceInfo.data?.map { it.coinInfo?.name }?.joinToString(",")
         val fullPriceList = fsyms?.let { ApiFactory.apiService.getFullPriceList(fSyms = it) }
-        if (fullPriceList != nu
+        if (fullPriceList != null) {
+            addToDataBase(fullPriceList)
+        }
+    }
+
+    private fun addToDataBase(coinPriceRAW: CoinPriceRAW) {
+        val keys = coinPriceRAW.coinPriceInfoObject?.keys
+        val list = mutableListOf<CoinPriceI
