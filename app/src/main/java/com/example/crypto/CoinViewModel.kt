@@ -29,4 +29,7 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private suspend fun loadData() {
-        val topCoinPriceInfo = ApiFactory.apiService.getTo
+        val topCoinPriceInfo = ApiFactory.apiService.getTopCoinsInfo(limit = 50)
+        val fsyms = topCoinPriceInfo.data?.map { it.coinInfo?.name }?.joinToString(",")
+        val fullPriceList = fsyms?.let { ApiFactory.apiService.getFullPriceList(fSyms = it) }
+        if (fullPriceList != nu
