@@ -46,4 +46,8 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
         db.coinPriceInfoDao().insertPriceList(list)
     }
 
-    override fun o
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.dispose()
+    }
+}
