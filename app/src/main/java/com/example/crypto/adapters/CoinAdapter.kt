@@ -13,4 +13,11 @@ import kotlinx.android.synthetic.main.item_coin_info.view.*
 
 class CoinAdapter(private val context: CoinPricefragment1) :
     RecyclerView.Adapter<CoinAdapter.CoinViewHolder>() {
-    var coinInfoList: List<CoinPriceInf
+    var coinInfoList: List<CoinPriceInfo> = listOf()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
+    var onCoinClickListener: OnCoinClickListener? = null
+
+    inner class CoinViewHolder(itemView: View) : RecyclerView.Vie
