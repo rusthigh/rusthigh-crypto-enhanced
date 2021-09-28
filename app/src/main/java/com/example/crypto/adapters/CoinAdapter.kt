@@ -32,3 +32,9 @@ class CoinAdapter(private val context: CoinPricefragment1) :
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_coin_info, parent, false)
         return CoinViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: CoinViewHolder, position: Int) {
+        val coin = coinInfoList[position]
+        holder.itemView.setOnClickListener {
+            onCoinClickListener?.onCoinClick
