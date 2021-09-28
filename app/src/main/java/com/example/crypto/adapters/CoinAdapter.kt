@@ -28,4 +28,7 @@ class CoinAdapter(private val context: CoinPricefragment1) :
 
     }
 
-    override fun onCrea
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinViewHolder {
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_coin_info, parent, false)
+        return CoinViewHolder(view)
