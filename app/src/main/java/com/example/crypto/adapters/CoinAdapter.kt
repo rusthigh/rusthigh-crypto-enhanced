@@ -45,4 +45,14 @@ class CoinAdapter(private val context: CoinPricefragment1) :
             tvSymbols.text = String.format(symbolsTemplate, coin.FROMSYMBOL, coin.TOSYMBOL)
             tvPrice.text = coin.PRICE.toString()
             tvUpdate.text = String.format(lastTemplate, coin.getFormatedTime())
-            Glide.w
+            Glide.with(context)
+                .load(coin.getFullImageUrl())
+                .into(holder.logoCoin)
+        }
+
+    }
+
+    override fun getItemCount(): Int {
+        return coinInfoList.size
+    }
+
