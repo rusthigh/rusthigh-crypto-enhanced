@@ -56,3 +56,9 @@ class CoinAdapter(private val context: CoinPricefragment1) :
         return coinInfoList.size
     }
 
+    interface OnCoinClickListener {
+        fun onCoinClick(coinPriceInfo: CoinPriceInfo)
+    }
+
+
+}
