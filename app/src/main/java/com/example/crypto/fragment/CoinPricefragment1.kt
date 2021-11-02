@@ -25,4 +25,11 @@ class CoinPricefragment1 : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGrou
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        super.onCreate(savedInstanceState)
+        val view = inflater.inflate(R.layout.fragment_coin_pricefragment1, container, false)
+
+        val adapter = CoinAdapter(this)
+    
