@@ -18,4 +18,11 @@ import kotlinx.android.synthetic.main.coin_price_list_activity.*
 
 
 class CoinPricefragment1 : Fragment() {
-    pr
+    private var viewModel: CoinViewModel? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGrou
