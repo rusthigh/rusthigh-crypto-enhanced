@@ -12,4 +12,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.crypto.CoinPriceListActivity
 import com.example.crypto.CoinViewModel
 import com.example.crypto.R
-import co
+import com.example.crypto.adapters.CoinAdapter
+import com.example.crypto.pojo.CoinPriceInfo
+import kotlinx.android.synthetic.main.coin_price_list_activity.*
+
+
+class CoinPricefragment1 : Fragment() {
+    pr
