@@ -32,4 +32,7 @@ class CoinPricefragment1 : Fragment() {
         val view = inflater.inflate(R.layout.fragment_coin_pricefragment1, container, false)
 
         val adapter = CoinAdapter(this)
-    
+        val rvCoinPriceList = view.findViewById<RecyclerView>(R.id.rvCoinPriceList)
+        adapter.onCoinClickListener = object : CoinAdapter.OnCoinClickListener{
+            override fun onCoinClick(coinPriceInfo: CoinPriceInfo) {
+  
