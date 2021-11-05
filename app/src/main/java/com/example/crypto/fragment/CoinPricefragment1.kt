@@ -35,4 +35,8 @@ class CoinPricefragment1 : Fragment() {
         val rvCoinPriceList = view.findViewById<RecyclerView>(R.id.rvCoinPriceList)
         adapter.onCoinClickListener = object : CoinAdapter.OnCoinClickListener{
             override fun onCoinClick(coinPriceInfo: CoinPriceInfo) {
-  
+                val intent = Intent(activity,DetailFragment::class.java)
+                val fragment = DetailFragment.newInstance(coinPriceInfo.FROMSYMBOL)
+                openFragment(fragment)
+            }
+    
