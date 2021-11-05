@@ -39,4 +39,8 @@ class CoinPricefragment1 : Fragment() {
                 val fragment = DetailFragment.newInstance(coinPriceInfo.FROMSYMBOL)
                 openFragment(fragment)
             }
-    
+        }
+        rvCoinPriceList.adapter = adapter
+        viewModel = ViewModelProviders.of(this).get(CoinViewModel::class.java)
+        viewModel?.priceList?.observe(viewLifecycleOwner, Observer {
+            ada
