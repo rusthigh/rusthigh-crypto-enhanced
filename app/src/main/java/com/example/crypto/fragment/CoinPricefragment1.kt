@@ -43,4 +43,15 @@ class CoinPricefragment1 : Fragment() {
         rvCoinPriceList.adapter = adapter
         viewModel = ViewModelProviders.of(this).get(CoinViewModel::class.java)
         viewModel?.priceList?.observe(viewLifecycleOwner, Observer {
-            ada
+            adapter.coinInfoList = it
+        })
+
+        return view
+    }
+
+
+
+private fun openFragment(f: Fragment){
+    activity?.supportFragmentManager
+        ?.beginTransaction()
+        ?.replace(R.id.fragment_h
