@@ -54,4 +54,16 @@ class CoinPricefragment1 : Fragment() {
 private fun openFragment(f: Fragment){
     activity?.supportFragmentManager
         ?.beginTransaction()
-        ?.replace(R.id.fragment_h
+        ?.replace(R.id.fragment_holder,f)
+        ?.addToBackStack(null)
+        ?.commit()
+}
+
+    companion object {
+
+        @JvmStatic
+        fun newInstance() =  CoinPricefragment1().apply {
+                arguments = Bundle().apply {
+
+                }
+        
