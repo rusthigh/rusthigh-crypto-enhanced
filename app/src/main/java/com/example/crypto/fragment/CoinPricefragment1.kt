@@ -66,4 +66,6 @@ private fun openFragment(f: Fragment){
                 arguments = Bundle().apply {
 
                 }
-        
+            }
+    }
+}
