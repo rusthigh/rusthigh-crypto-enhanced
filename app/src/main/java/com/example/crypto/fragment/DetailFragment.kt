@@ -33,4 +33,8 @@ class DetailFragment : Fragment() {
     }
 
     override fun onCreateView(
- 
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val ii = requireArguments().getString(EXTRA_FROM_SYMBOL)
+        viewModel = ViewModelProvid
