@@ -22,4 +22,15 @@ class DetailFragment : Fragment() {
     private var viewModel: CoinViewModel? = null
 
 
-    override fun onCreate(savedInstanceState: 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    override fun onCreateView(
+ 
