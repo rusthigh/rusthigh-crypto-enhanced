@@ -37,4 +37,7 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val ii = requireArguments().getString(EXTRA_FROM_SYMBOL)
-        viewModel = ViewModelProvid
+        viewModel = ViewModelProviders.of(this).get(CoinViewModel::class.java)
+        if (ii != null) {
+            viewModel?.getDetailInfo(ii)?.observe(viewLifecycleOwner, Observer {
+                tvPrice.text = it.PRICE.to
