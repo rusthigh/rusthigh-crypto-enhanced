@@ -40,4 +40,8 @@ class DetailFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(CoinViewModel::class.java)
         if (ii != null) {
             viewModel?.getDetailInfo(ii)?.observe(viewLifecycleOwner, Observer {
-                tvPrice.text = it.PRICE.to
+                tvPrice.text = it.PRICE.toString()
+                tvMinPrice.text = it.LOWDAY.toString()
+                tvMaxPrice.text = it.HIGHDAY.toString()
+                tvLastMarket.text = it.LASTMARKET.toString()
+                t
