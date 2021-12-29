@@ -49,4 +49,13 @@ class DetailFragment : Fragment() {
                 tvToSymbol.text = it.TOSYMBOL
                 Picasso.get().load(it.getFullImageUrl()).into(ivLogoCoin)
 
-      
+            })
+        }
+        return inflater.inflate(R.layout.fragment_detail, container, false)
+    }
+
+    companion object {
+       private const val EXTRA_FROM_SYMBOL = "fSym"
+
+        @JvmStatic
+        fun newInstance(f
