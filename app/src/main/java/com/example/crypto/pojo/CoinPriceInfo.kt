@@ -59,3 +59,108 @@ data class CoinPriceInfo(
 
     @SerializedName("VOLUME24HOURTO")
     var VOLUME24HOURTO: Double? = null,
+
+    @SerializedName("OPENDAY")
+    var OPENDAY: Double? = null,
+
+    @SerializedName("HIGHDAY")
+    var HIGHDAY: Double? = null,
+
+    @SerializedName("LOWDAY")
+    var LOWDAY: Double? = null,
+
+    @SerializedName("OPEN24HOUR")
+    var OPEN24HOUR: Double? = null,
+
+    @SerializedName("HIGH24HOUR")
+    var HIGH24HOUR: Double? = null,
+
+    @SerializedName("LOW24HOUR")
+    var LOW24HOUR: Double? = null,
+
+    @SerializedName("LASTMARKET")
+    var LASTMARKET: String? = null,
+
+    @SerializedName("VOLUMEHOUR")
+    var VOLUMEHOUR: Double? = null,
+
+    @SerializedName("VOLUMEHOURTO")
+    var VOLUMEHOURTO: Double? = null,
+
+    @SerializedName("OPENHOUR")
+    var OPENHOUR: Double? = null,
+
+    @SerializedName("HIGHHOUR")
+    var HIGHHOUR: Double? = null,
+
+    @SerializedName("LOWHOUR")
+    var lowHour: Double? = null,
+
+    @SerializedName("TOPTIERVOLUME24HOUR")
+    var TOPTIERVOLUME24HOUR: Double? = null,
+
+    @SerializedName("TOPTIERVOLUME24HOURTO")
+    var TOPTIERVOLUME24HOURTO: Double? = null,
+
+    @SerializedName("CHANGE24HOUR")
+    var CHANGE24HOUR: Double? = null,
+
+    @SerializedName("CHANGEPCT24HOUR")
+    var CHANGEPCT24HOUR: Double? = null,
+
+    @SerializedName("CHANGEDAY")
+    var CHANGEDAY: Double? = null,
+
+    @SerializedName("CHANGEPCTDAY")
+    var CHANGEPCTDAY: Double? = null,
+
+    @SerializedName("CHANGEHOUR")
+    var CHANGEHOUR: Double? = null,
+
+    @SerializedName("CHANGEPCTHOUR")
+    var CHANGEPCTHOUR: Double? = null,
+
+    @SerializedName("CONVERSIONTYPE")
+    var CONVERSIONTYPE: String? = null,
+
+    @SerializedName("CONVERSIONSYMBOL")
+    var CONVERSIONSYMBOL: String? = null,
+
+    @SerializedName("SUPPLY")
+    var SUPPLY: Double? = null,
+
+    @SerializedName("MKTCAP")
+    var MKTCAP: Double? = null,
+
+    @SerializedName("MKTCAPPENALTY")
+    var MKTCAPPENALTY: Int? = null,
+
+    @SerializedName("CIRCULATINGSUPPLY")
+    var CIRCULATINGSUPPLY: Double? = null,
+
+    @SerializedName("CIRCULATINGSUPPLYMKTCAP")
+    var CIRCULATINGSUPPLYMKTCAP: Double? = null,
+
+    @SerializedName("TOTALVOLUME24H")
+    var TOTALVOLUME24H: Double? = null,
+
+    @SerializedName("TOTALVOLUME24HTO")
+    var TOTALVOLUME24HTO: Double? = null,
+
+    @SerializedName("TOTALTOPTIERVOLUME24H")
+    var TOTALTOPTIERVOLUME24H: Double? = null,
+
+    @SerializedName("TOTALTOPTIERVOLUME24HTO")
+    var TOTALTOPTIERVOLUME24HTO: Double? = null,
+
+    @SerializedName("IMAGEURL")
+    var IMAGEURL: String? = null
+
+){
+    fun getFormatedTime(): String {
+    return convertTime(LASTUPDATE)
+    }
+    fun getFullImageUrl(): String{
+return BASE_URL_IMG  + IMAGEURL
+    }
+}
