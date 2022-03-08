@@ -55,4 +55,8 @@
         <ImageView
             android:id="@+id/ivLogoCoin"
             android:layout_width="150dp"
-            android:layout_height="1
+            android:layout_height="120dp"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvSymbols"
+            app:layout_constrai
